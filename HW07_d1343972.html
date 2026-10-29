@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+    HW06：台中公園景點報導 CSS 美化版
+    作者：張睿恩 Alice；學號：d1343972
+    本檔由 HW05 延伸，保留 HTML5 語意結構與報導內容，並在同一份 HTML 中練習 style 元素與行內樣式。
+-->
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="認識台中公園的百年歷史、湖心亭、日月湖與園內綠地，並透過景點比較表、照片、YouTube 影片及 Google 地圖規劃散步行程。">
+    <meta name="author" content="張睿恩 Alice，學號 d1343972">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:title" content="台中公園：城市裡的百年風景">
+    <meta property="og:description" content="從湖心亭到日月湖，認識台中公園的歷史、景點特色與散步建議。">
+    <meta property="og:image" content="https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_A12-00079_10.jpg">
+    <meta property="og:image:alt" content="台中公園日月湖上的湖心亭與周圍湖景">
+    <!-- 尚未確認正式網址前，不填寫虛構的 canonical 或 og:url。 -->
+    <title>HW06｜台中公園報導 CSS 美化</title>
+    <!-- 使用相對路徑載入外部 CSS -->
+<link rel="stylesheet" href="css/hw07.css">
+</head>
+<body>
+    <!-- header 是頁首，放置報導主標、副標、作者與日期。 -->
+    <header id="top">
+        <h1>台中公園：城市裡的百年風景</h1>
+        <p>從湖心亭到日月湖，認識台中市中心的歷史地標與綠色空間。</p>
+        <p>作者：張睿恩 Alice｜學號：d1343972｜整理日期：<time datetime="2026-10-24">2026 年 10 月 24 日</time></p>
+        <!-- 方法一：行內樣式只調整這段小字的透明度，作為頁首補充資訊。 -->
+        <p><small class="report-disclaimer">本文根據公開資料自行整理，並非現場採訪紀錄；景點開放與交通資訊請以官方最新公告為準。</small></p>
+    </header>
+
+    <!-- nav 提供頁內目錄；連結可用滑鼠或鍵盤操作。 -->
+    <nav class="panel" aria-label="報導目錄">
+        <h2>報導目錄</h2>
+        <ul>
+            <li><a href="#intro">一、台中公園簡介</a></li>
+            <li><a href="#highlights">二、特色與散步順序</a></li>
+            <li><a href="#comparison">三、景點比較表</a></li>
+            <li><a href="#photo">四、湖心亭照片</a></li>
+            <li><a href="#video">五、YouTube 影片</a></li>
+            <li><a href="#map">六、位置地圖</a></li>
+            <li><a href="#reminder">七、走讀補充提醒</a></li>
+            <li><a href="#sources">八、資料來源</a></li>
+        </ul>
+    </nav>
+
+    <!-- main 是全頁唯一主要內容區；article 包含完整且可獨立閱讀的報導。 -->
+    <main>
+        <article aria-label="台中公園景點介紹報導">
+            <section class="panel" id="intro">
+                <h2>一、台中公園簡介</h2>
+                <p>台中公園位於台中市區，是一處結合休憩、自然景觀與歷史記憶的公共綠地。公園於 1903 年 10 月 28 日啟用，至今已成為許多人認識台中城市發展時會提到的地標。相較於車流繁忙的市區道路，公園裡的樹木、步道與湖泊提供了可以放慢腳步的空間，也讓居民和旅客能在市中心親近自然。</p>
+                <p>園內最具代表性的建築之一是日月湖上的湖心亭。湖心亭於 1908 年興建，與縱貫鐵路全線通車的歷史背景有關，後來成為台中公園的重要象徵，並於 1999 年被指定為市定古蹟。湖心亭不只是湖面上的景觀建築，也讓人看見城市公共空間、交通發展與歷史保存之間的連結。參觀時可以從湖岸不同角度觀察亭體輪廓與水面倒影，感受它在公園景觀中的位置。</p>
+                <p>除了湖心亭，日月湖、園內橋梁、林蔭步道與綠地也構成台中公園的特色。這些景觀不一定需要匆忙走完，沿途觀察樹蔭、湖面與周圍建築，就能更完整地理解公園如何融入現代城市生活。若時間充裕，也可以留意現場的解說牌，從官方文字認識景點背景，並尊重古蹟與公共環境。本文的散步順序是作者依景點特色自行規劃的建議，不是官方指定路線。</p>
+                <p><strong>景點地址：</strong>台中市北區雙十路一段 65 號附近。</p>
+                <!-- 方法一：行內樣式把閱讀焦點標記成深綠色，並增加內距。 -->
+                <p><strong>本篇閱讀焦點：</strong><mark class="reading-focus">湖心亭的歷史意義，以及日月湖與城市綠地如何共同形成台中公園的特色。</mark></p>
+            </section>
+
+            <section class="panel" id="highlights">
+                <h2>二、特色與散步順序</h2>
+                <h3>值得留意的特色</h3>
+                <ul>
+                    <li><strong>歷史地標：</strong>湖心亭於 1908 年興建，與縱貫鐵路全線通車的歷史背景有關。</li>
+                    <li><strong>湖畔景觀：</strong>日月湖、湖心亭與周邊橋梁形成具有辨識度的景色。</li>
+                    <li><strong>城市綠地：</strong>樹木與步道提供休息、散步及觀察自然環境的公共空間。</li>
+                </ul>
+                <h3>建議散步順序</h3>
+                <!-- 方法一：行內樣式讓散步提醒有淡金色底色與左側內距，從一般段落中凸顯。 -->
+                <p  class="route-note">以下是作者依照景點特色自行規劃的散步建議，並非官方路線；請依現場告示與個人狀況調整。</p>
+                <ol>
+                    <li>抵達公園後先查看入口附近的園區資訊，確認自己所在的位置。</li>
+                    <li>前往日月湖周邊，從湖岸不同角度欣賞湖心亭與水面倒影。</li>
+                    <li>沿園內步道散步，觀察橋梁、樹木與周邊綠地。</li>
+                    <li>閱讀現場解說牌，認識古蹟背景；拍照時不要攀爬或觸碰古蹟構件。</li>
+                    <li>離開前確認垃圾已妥善帶走，維持公園環境整潔。</li>
+                </ol>
+            </section>
+
+            <section class="panel" id="comparison">
+                <h2>三、景點比較表</h2>
+                <p>下表整理公園內幾個值得觀察的地點，方便讀者依照自己的興趣安排停留時間。</p>
+                <!-- 表格不再使用 border="1"，改由 head 中的 CSS 設定框線、內距與表頭背景。 -->
+                <table>
+                    <caption>台中公園景點特色與觀察重點</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">景點名稱</th>
+                            <th scope="col">主要特色</th>
+                            <th scope="col">建議觀察重點</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">湖心亭</th>
+                            <td>具有歷史意義的亭式建築，為市定古蹟。</td>
+                            <td>建築外觀、亭體與鐵路通車歷史的關聯。</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">日月湖</th>
+                            <td>湖心亭所在的湖泊，是公園代表性景觀。</td>
+                            <td>湖面倒影、湖岸視角與周圍植栽。</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">園內步道與綠地</th>
+                            <td>提供散步、休息及親近自然的公共空間。</td>
+                            <td>樹蔭、步道動線與公園和城市生活的關係。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="panel" id="photo">
+                <h2>四、湖心亭照片</h2>
+                <figure>
+                    <img src="https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_A12-00079_10.jpg" alt="台中公園日月湖上的湖心亭與周圍湖面景觀" width="480" height="320" loading="lazy">
+                    <figcaption>湖心亭是台中公園的重要歷史地標。照片來源：<a href="https://eng.taiwan.net.tw/m1.aspx?id=A12-00126&amp;sNo=0000208" target="_blank" rel="noopener noreferrer">交通部觀光署：台中公園景點介紹</a>。圖片使用規範與著作權請依原網站說明。</figcaption>
+                </figure>
+            </section>
+
+            <section class="panel" id="video">
+                <h2>五、YouTube 影片</h2>
+                <p>以下影片可作為認識台中公園與湖心亭的影音補充；影片資訊以 YouTube 發布頁面為準。</p>
+                <div class="media-frame">
+                    <iframe class="media-frame" src="https://www.youtube.com/embed/zywCUOaybyc" title="KKday Taiwan：台中公園湖心亭，台中必訪知名地標" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <p>影片來源與一般連結：<a href="https://www.youtube.com/watch?v=zywCUOaybyc" target="_blank" rel="noopener noreferrer">在 YouTube 觀看「台中公園湖心亭，台中必訪知名地標」</a>。</p>
+                <p><small>若播放器未能播放，請使用一般影片連結；本機檢查時建議透過 HTTP 預覽，而非直接以 file:// 開啟。</small></p>
+            </section>
+
+            <section class="panel" id="map">
+                <h2>六、台中公園位置地圖</h2>
+                <p><strong>地址：</strong>台中市北區雙十路一段 65 號附近。</p>
+                <iframe class="media-frame" src="https://maps.google.com/maps?q=24.144818,120.68447&amp;z=16&amp;output=embed" title="Google 地圖：台中公園位置" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><a href="https://www.google.com/maps/search/?api=1&amp;query=24.144818%2C120.68447" target="_blank" rel="noopener noreferrer">在 Google 地圖開啟台中公園位置</a>。地圖來源：Google 地圖；座標參考交通部觀光署景點資料。</p>
+            </section>
+
+            <!-- aside 保留補充提醒用途；CSS 以 #reminder ID 選擇器調整背景與左框線。 -->
+            <aside id="reminder" aria-label="走讀補充提醒">
+                <h2>七、走讀補充提醒</h2>
+                <p><strong>出發前的小提醒：</strong>公園設施、交通班次與開放資訊可能變動，請先查看官方公告。參觀古蹟時請勿攀爬建築或留下垃圾，也請尊重其他遊客的休憩空間。</p>
+                <details>
+                    <summary>查看額外的參觀建議</summary>
+                    <p>若想拍攝湖心亭，可在湖岸不同位置觀察光線與倒影；請留意天候、地面濕滑狀況，並遵守現場安全告示。以上為作者自行整理的走讀建議。</p>
+                </details>
+            </aside>
+
+            <section class="panel" id="sources">
+                <h2>八、資料來源</h2>
+                <p>本文依公開資料整理，未使用虛構採訪。文字資料、圖片、影片與地圖來源分別列示如下。</p>
+                <h3>文字參考來源</h3>
+                <ul>
+                    <li><a href="https://www.tchac.taichung.gov.tw/building?pid=15&amp;uid=33" target="_blank" rel="noopener noreferrer">台中市文化資產處：中山公園湖心亭</a>——湖心亭歷史、文化資產身分與所在地資訊。</li>
+                    <li><a href="https://www.tchac.taichung.gov.tw/attractioninfo?pid=22&amp;uid=69" target="_blank" rel="noopener noreferrer">台中市文化資產處：台中公園導覽景點介紹</a>——公園沿革與園內文化資產資訊。</li>
+                    <li><a href="https://eng.taiwan.net.tw/m1.aspx?id=A12-00126&amp;sNo=0000208" target="_blank" rel="noopener noreferrer">交通部觀光署：台中公園</a>——官方觀光景點介紹及照片參考。</li>
+                </ul>
+                <h3>媒體與地圖來源</h3>
+                <ul>
+                    <li>照片：<a href="https://eng.taiwan.net.tw/m1.aspx?id=A12-00126&amp;sNo=0000208" target="_blank" rel="noopener noreferrer">交通部觀光署台中公園景點頁</a>。</li>
+                    <li>影片：<a href="https://www.youtube.com/watch?v=zywCUOaybyc" target="_blank" rel="noopener noreferrer">KKday Taiwan：台中公園湖心亭，台中必訪知名地標</a>。</li>
+                    <li>地圖：<a href="https://www.google.com/maps/search/?api=1&amp;query=24.144818%2C120.68447" target="_blank" rel="noopener noreferrer">Google 地圖：台中公園</a>；座標參考交通部觀光署景點資料。</li>
+                </ul>
+                <p><small>整理與更新日期：2026 年 10 月 24 日。出發前請再次確認官方公告。</small></p>
+            </section>
+        </article>
+    </main>
+
+    <!-- footer 是頁尾，保留作品資訊與回到頁首連結。 -->
+    <footer>
+        <p>HW06｜台中公園報導 CSS 美化</p>
+        <p>作者：張睿恩 Alice｜學號：d1343972</p>
+        <p>最後整理日期：<time datetime="2026-10-24">2026 年 10 月 24 日</time></p>
+        <p><a href="#top">回到頁首</a></p>
+    </footer>
+</body>
+</html>

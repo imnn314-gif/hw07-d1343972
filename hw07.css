@@ -1,0 +1,194 @@
+     /* 元素選擇器：統一全頁字型、行高、文字顏色與背景，讓長篇中文容易閱讀。 */
+        body {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #263b35;
+            background-color: #f4f7f1;
+        }
+
+        /* ID 選擇器：頁首用深綠底色與留白凸顯文章主題。 */
+        #top {
+            padding: 30px;
+            margin-bottom: 24px;
+            color: #ffffff;
+            background-color: #245c49;
+            border-radius: 16px;
+            border-bottom: 6px solid #d8b76a;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.35;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.1rem;
+            letter-spacing: 0.04em;
+        }
+
+        h2 {
+            padding-bottom: 8px;
+            color: #245c49;
+            border-bottom: 2px solid #c7d8c9;
+        }
+
+        h3 {
+            color: #527b58;
+        }
+
+        /* class 選擇器：主文、導覽與頁尾使用一致的白底卡片、內距和外距。 */
+        .panel {
+            margin: 22px 0;
+            padding: 22px 26px;
+            background-color: #ffffff;
+            border: 1px solid #d8e3d8;
+            border-radius: 12px;
+        }
+
+        nav ul {
+            padding-left: 24px;
+        }
+
+        a {
+            color: #176b57;
+            text-underline-offset: 3px;
+        }
+
+        /* hover 提示滑鼠移入；focus-visible 讓鍵盤使用者看見目前焦點。 */
+        a:hover {
+            color: #9a5c16;
+            text-decoration-thickness: 2px;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #d39b35;
+            outline-offset: 3px;
+            border-radius: 3px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        table {
+            width: 100%;
+            margin: 18px 0;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+
+        caption {
+            padding: 10px;
+            font-weight: 700;
+            color: #245c49;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #b8cbbd;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        thead th {
+            color: #ffffff;
+            background-color: #39745d;
+        }
+
+        tbody th {
+            background-color: #edf3e9;
+        }
+
+        figure {
+            margin: 20px 0;
+            padding: 16px;
+            background-color: #f7f9f4;
+            border: 1px solid #d8e3d8;
+            border-radius: 10px;
+        }
+
+        img, iframe {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border: 0;
+        }
+
+        .media-frame {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            color: #53675c;
+            font-size: 0.9rem;
+        }
+
+        /* ID 選擇器：aside 保留補充提醒的語意，並以淡金色背景與左框線區別正文。 */
+        #reminder {
+            margin: 24px 0;
+            padding: 20px 24px;
+            background-color: #fff7df;
+            border-left: 6px solid #d8b76a;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 28px;
+            padding: 20px 24px;
+            color: #eaf2eb;
+            background-color: #263f35;
+            border-radius: 12px;
+        }
+
+        footer a {
+            color: #ffe3a0;
+        }
+
+        hr {
+            margin: 28px 0;
+            border: 0;
+            border-top: 1px solid #cbd8cc;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+                font-size: 15px;
+            }
+
+            #top, .panel {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            th, td {
+                padding: 8px;
+                overflow-wrap: anywhere;
+            }
+        }
+        /* 資料整理聲明：保留原本的 90% 不透明度。 */
+.report-disclaimer {
+    opacity: 0.9;
+}
+/* 閱讀焦點：保留標記文字原本的背景色、文字色與內距。 */
+.reading-focus {
+    background-color: #f6df9d;
+    color: #3e351c;
+    padding: 2px 6px;
+}
+/* 散步路線提醒：保留原本的背景色、內距與左側框線。 */
+.route-note {
+    background-color: #fff7df;
+    padding: 12px 16px;
+    border-left: 4px solid #d8b76a;
+}
